@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         message.className = `message ${className}`;
         message.textContent = text;
         chatMessages.appendChild(message);
-        chatMessages.scrollTop = chatMessages.scrollHeight; // Прокручиваем вниз после добавления сообщения
+        chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
     function fetchBotResponse(userMessage) {
