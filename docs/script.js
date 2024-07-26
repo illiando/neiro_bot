@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function() {
     const chatHeader = document.getElementById('chat-header');
     const sendButton = document.getElementById('send-button');
@@ -41,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         message.className = `message ${className}`;
         message.textContent = text;
         chatMessages.appendChild(message);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
+        chatMessages.scrollTop = chatMessages.scrollHeight; // Прокручиваем вниз после добавления сообщения
     }
 
     function fetchBotResponse(userMessage) {
