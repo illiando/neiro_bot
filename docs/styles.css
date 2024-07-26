@@ -50,9 +50,9 @@
 #chat-messages {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Устанавливаем расстояние между сообщениями */
-    max-height: 100%; /* Устанавливаем максимальную высоту */
-    overflow-y: auto; /* Включаем вертикальную прокрутку */
+    gap: 10px;
+    max-height: 100%;
+    overflow-y: auto;
 }
 
 .message {
@@ -80,6 +80,8 @@
     background-color: #f9f9f9;
     justify-content: center;
     gap: 10px;
+    position: sticky;
+    bottom: 0;
 }
 
 #user-input {
