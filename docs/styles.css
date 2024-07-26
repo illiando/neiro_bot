@@ -4,26 +4,26 @@
 #chat-widget {
     border: 1px solid #ccc;
     border-radius: 8px;
-    width: 330px; /* Увеличили ширину на 30px */
+    width: 330px;
     height: 400px;
     display: flex;
     flex-direction: column;
     position: fixed;
-    bottom: -100px; /* Начальное состояние за пределами экрана */
+    bottom: -100px;
     right: 20px;
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Начальная непрозрачность */
-    transition: opacity 0.5s ease, bottom 0.5s ease; /* Переходы для анимации */
-    z-index: 1000; /* Обеспечиваем, чтобы виджет находился поверх других элементов */
-    font-family: 'Onest', sans-serif; /* Устанавливаем шрифт для всего виджета */
-    font-size: 14px; /* Устанавливаем базовый размер шрифта */
+    opacity: 0;
+    transition: opacity 0.5s ease, bottom 0.5s ease;
+    z-index: 1000;
+    font-family: 'Onest', sans-serif;
+    font-size: 14px;
 }
 
 /* Применяем анимацию видимости */
 #chat-widget.show {
-    bottom: 20px; /* Позиция при появлении */
-    opacity: 1; /* Полная непрозрачность */
+    bottom: 20px;
+    opacity: 1;
 }
 
 /* Стили для заголовка */
@@ -35,30 +35,25 @@
     font-weight: bold;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    position: relative;
-    cursor: pointer; /* Указатель для кликабельного заголовка */
-    z-index: 1001; /* Обеспечиваем, чтобы заголовок находился выше остальных элементов */
-    font-size: 16px; /* Размер шрифта заголовка */
+    cursor: pointer;
+    z-index: 1001;
+    font-size: 16px;
 }
 
 /* Стили для содержимого чата */
 #chat-body {
-    display: flex;
-    flex-direction: column;
     flex: 1;
-    overflow: hidden; /* Скрываем переполнение */
+    padding: 10px;
+    overflow-y: auto;
     border-bottom: 1px solid #ccc;
-    z-index: 1000; /* Обеспечиваем, чтобы содержимое чата находилось выше других элементов */
+    position: relative;
+    z-index: 1000;
 }
 
 #chat-messages {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    overflow-y: auto; /* Вертикальная прокрутка */
-    overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
-    font-size: 14px; /* Размер шрифта для сообщений */
-    padding: 10px;
+    font-size: 14px;
 }
 
 .message {
@@ -84,9 +79,8 @@
     border-top: 1px solid #ccc;
     padding: 10px;
     background-color: #f9f9f9;
-    justify-content: center; /* Центрирование содержимого */
-    gap: 10px; /* Расстояние между полем ввода и кнопкой */
-    flex-shrink: 0; /* Предотвращаем изменение размера контейнера футера */
+    justify-content: center;
+    gap: 10px;
 }
 
 #user-input {
@@ -94,9 +88,8 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    z-index: 1000; /* Обеспечиваем, чтобы поле ввода находилось выше других элементов */
-    width: calc(100% - 100px); /* Оставляем место для кнопки */
-    font-size: 14px; /* Размер шрифта для поля ввода */
+    z-index: 1000;
+    font-size: 14px;
 }
 
 #send-button {
@@ -106,8 +99,8 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    flex-shrink: 0; /* Предотвращаем изменение размера кнопки */
-    font-size: 14px; /* Размер шрифта для кнопки */
+    flex-shrink: 0;
+    font-size: 14px;
 }
 
 #send-button:hover {
@@ -116,11 +109,11 @@
 
 /* Стили для свернутого состояния виджета */
 #chat-widget.minimized {
-    height: 50px; /* Высота свернутого состояния */
-    bottom: 20px; /* Позиция при свернутом состоянии */
+    height: 50px;
+    bottom: 20px;
 }
 
 #chat-widget.minimized #chat-body,
 #chat-widget.minimized #chat-footer {
-    display: none; /* Скрываем содержимое при свернутом состоянии */
+    display: none;
 }
