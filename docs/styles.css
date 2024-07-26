@@ -4,7 +4,7 @@
 #chat-widget {
     border: 1px solid #ccc;
     border-radius: 8px;
-    width: 300px;
+    width: 330px; /* Увеличили ширину на 30px */
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -76,6 +76,8 @@
     border-top: 1px solid #ccc;
     padding: 10px;
     background-color: #f9f9f9;
+    justify-content: center; /* Центрирование содержимого */
+    gap: 10px; /* Расстояние между полем ввода и кнопкой */
 }
 
 #user-input {
@@ -84,16 +86,17 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     z-index: 1000; /* Обеспечиваем, чтобы поле ввода находилось выше других элементов */
+    width: calc(100% - 100px); /* Оставляем место для кнопки */
 }
 
 #send-button {
     padding: 8px 12px;
-    margin-left: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    flex-shrink: 0; /* Предотвращаем изменение размера кнопки */
 }
 
 #send-button:hover {
