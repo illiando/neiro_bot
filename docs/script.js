@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         chatWidget.classList.add('show');
         // Отправить приветственное сообщение через 2 секунды после появления виджета
         setTimeout(() => {
-            appendMessage("Привет! Я готов помочь написать тебе рекламный текст для проекта Нейропрофи. Напиши мне что-нибудь", 'bot-message');
+            appendMessage("Здравствуйте! Я готов ответить на ваши вопросы по марафону "Детский Нейроинструктор 2.0", 'bot-message');
         }, 2000);
     }, 5000);
 
