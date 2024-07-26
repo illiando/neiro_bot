@@ -1,6 +1,5 @@
 /* styles.css */
 
-/* Стили для виджета */
 #chat-widget {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -20,13 +19,11 @@
     font-size: 14px;
 }
 
-/* Применяем анимацию видимости */
 #chat-widget.show {
     bottom: 20px;
     opacity: 1;
 }
 
-/* Стили для заголовка */
 #chat-header {
     background-color: #007bff;
     color: #fff;
@@ -35,12 +32,12 @@
     font-weight: bold;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    position: relative;
     cursor: pointer;
     z-index: 1001;
     font-size: 16px;
 }
 
-/* Стили для содержимого чата */
 #chat-body {
     flex: 1;
     padding: 10px;
@@ -53,7 +50,9 @@
 #chat-messages {
     display: flex;
     flex-direction: column;
-    font-size: 14px;
+    gap: 10px; /* Устанавливаем расстояние между сообщениями */
+    max-height: 100%; /* Устанавливаем максимальную высоту */
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
 }
 
 .message {
@@ -107,7 +106,6 @@
     background-color: #0056b3;
 }
 
-/* Стили для свернутого состояния виджета */
 #chat-widget.minimized {
     height: 50px;
     bottom: 20px;
