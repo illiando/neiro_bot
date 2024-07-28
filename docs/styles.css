@@ -1,6 +1,6 @@
 /* styles.css */
 
-#chat-widget {
+.chat-widget {
     border: 1px solid #ccc;
     border-radius: 8px;
     width: 330px;
@@ -19,12 +19,12 @@
     font-size: 14px;
 }
 
-#chat-widget.show {
+.chat-widget.show {
     bottom: 20px;
     opacity: 1;
 }
 
-#chat-header {
+.chat-header {
     background-color: #007bff;
     color: #fff;
     padding: 10px;
@@ -38,7 +38,7 @@
     font-size: 16px;
 }
 
-#chat-body {
+.chat-body {
     flex: 1;
     padding: 10px;
     overflow-y: auto;
@@ -47,7 +47,7 @@
     z-index: 1000;
 }
 
-#chat-messages {
+.chat-messages {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -73,7 +73,7 @@
     align-self: flex-start;
 }
 
-#chat-footer {
+.chat-footer {
     display: flex;
     border-top: 1px solid #ccc;
     padding: 10px;
@@ -84,7 +84,7 @@
     bottom: 0;
 }
 
-#user-input {
+.user-input {
     flex: 1;
     padding: 8px;
     border: 1px solid #ccc;
@@ -93,7 +93,7 @@
     font-size: 14px;
 }
 
-#send-button {
+.send-button {
     padding: 8px 12px;
     background-color: #007bff;
     color: #fff;
@@ -104,16 +104,16 @@
     font-size: 14px;
 }
 
-#send-button:hover {
+.send-button:hover {
     background-color: #0056b3;
 }
 
-#chat-widget.minimized {
+.chat-widget.minimized {
     height: 50px;
     bottom: 20px;
 }
 
-#chat-widget.minimized #chat-body,
-#chat-widget.minimized #chat-footer {
+.chat-widget.minimized .chat-body,
+.chat-widget.minimized .chat-footer {
     display: none;
 }
