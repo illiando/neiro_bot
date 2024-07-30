@@ -34,15 +34,15 @@
 
 #chat-body {
     flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     overflow-y: auto;
 }
 
 #chat-messages {
-    display: flex;
-    flex-direction: column;
+    flex: 1;
     overflow-y: auto;
-    max-height: calc(100% - 40px); /* Учитываем высоту футера */
     padding-bottom: 10px; /* Оставляем место для сообщения */
 }
 
