@@ -87,6 +87,7 @@
 #chat-footer {
     display: flex;
     align-items: center;
+    justify-content: center; /* Центрирование содержимого по горизонтали */
     border-top: 1px solid #ccc;
     padding: 10px;
     background-color: #f9f9f9;
