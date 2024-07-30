@@ -27,7 +27,7 @@
     border-top-right-radius: 8px;
     cursor: pointer;
     box-sizing: border-box;
-    height: 10px; /* Фиксированная высота для заголовка */
+    height: 25px; /* Фиксированная высота для заголовка */
 }
 
 /* Основное тело чата */
