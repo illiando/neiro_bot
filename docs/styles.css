@@ -51,6 +51,8 @@
 #chat-messages {
     display: flex;
     flex-direction: column;
+    overflow-y: auto; /* Добавлено для прокрутки */
+    max-height: calc(100% - 60px); /* Ограничиваем высоту, чтобы сообщения не выходили за границу */
 }
 
 .message {
