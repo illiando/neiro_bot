@@ -7,20 +7,20 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    bottom: -100px; /* Начальное состояние за пределами экрана */
+    bottom: -100px;
     right: 20px;
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Начальная непрозрачность */
-    transition: opacity 0.5s ease, bottom 0.5s ease; /* Переходы для анимации */
-    z-index: 1000; /* Обеспечиваем, чтобы виджет находился поверх других элементов */
-    overflow: hidden; /* Добавлено для предотвращения выхода содержимого за пределы виджета */
+    opacity: 0;
+    transition: opacity 0.5s ease, bottom 0.5s ease;
+    z-index: 1000;
+    overflow: hidden;
 }
 
 /* Применяем анимацию видимости */
 #chat-widget.show {
-    bottom: 20px; /* Позиция при появлении */
-    opacity: 1; /* Полная непрозрачность */
+    bottom: 20px;
+    opacity: 1;
 }
 
 /* Стили для заголовка */
@@ -33,34 +33,33 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     position: relative;
-    cursor: pointer; /* Указатель для кликабельного заголовка */
-    z-index: 1001; /* Обеспечиваем, чтобы заголовок находился выше остальных элементов */
+    cursor: pointer;
+    z-index: 1001;
 }
 
 /* Стили для содержимого чата */
 #chat-body {
     flex: 1;
     padding: 10px;
-    overflow-y: auto; /* Добавлено для прокрутки по вертикали */
+    overflow-y: auto;
     border-bottom: 1px solid #ccc;
-    position: relative; /* Убедитесь, что содержимое не перекрывает другие элементы */
-    z-index: 1000; /* Обеспечиваем, чтобы содержимое чата находилось выше других элементов */
-    max-height: calc(100% - 20px); /* Ограничиваем высоту содержимого */
+    position: relative;
+    z-index: 1000;
 }
 
 #chat-messages {
     display: flex;
     flex-direction: column;
-    overflow-y: auto; /* Добавлено для вертикальной прокрутки */
-    max-height: 100%; /* Устанавливаем максимальную высоту для контейнера сообщений */
+    overflow-y: auto;
+    max-height: 100%;
 }
 
 .message {
     margin: 5px 0;
     padding: 8px;
     border-radius: 4px;
-    max-width: calc(100% - 20px); /* Ограничиваем ширину сообщений */
-    word-wrap: break-word; /* Разбиваем длинные слова */
+    max-width: calc(100% - 20px);
+    word-wrap: break-word;
 }
 
 .user-message {
@@ -80,6 +79,8 @@
     border-top: 1px solid #ccc;
     padding: 10px;
     background-color: #f9f9f9;
+    position: relative;
+    z-index: 1000;
 }
 
 #user-input {
@@ -87,7 +88,7 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    z-index: 1000; /* Обеспечиваем, чтобы поле ввода находилось выше других элементов */
+    z-index: 1000;
 }
 
 #send-button {
@@ -104,13 +105,12 @@
     background-color: #0056b3;
 }
 
-/* Стили для свернутого состояния виджета */
 #chat-widget.minimized {
-    height: 50px; /* Высота свернутого состояния */
-    bottom: 20px; /* Позиция при свернутом состоянии */
+    height: 50px;
+    bottom: 20px;
 }
 
 #chat-widget.minimized #chat-body,
 #chat-widget.minimized #chat-footer {
-    display: none; /* Скрываем содержимое при свернутом состоянии */
+    display: none;
 }
