@@ -1,3 +1,7 @@
+html {
+    font-size: 16px; /* Базовый размер шрифта для корневого элемента */
+}
+
 /* Контейнер для виджета */
 #chat-widget {
     border: 1px solid #ccc;
@@ -34,7 +38,7 @@
 /* Заголовок h3 */
 #chat-header h3 {
     margin: 0;
-    font-size: 25px;
+    font-size: 1.5rem; /* Использование rem для согласованного размера шрифта */
     line-height: 1;
     text-align: center;
 }
@@ -64,6 +68,7 @@
     border-radius: 4px;
     max-width: calc(100% - 20px);
     word-wrap: break-word;
+    font-size: 1rem; /* Использование rem для размера шрифта сообщений */
 }
 
 /* Сообщения пользователя */
@@ -92,6 +97,7 @@
     box-sizing: border-box;
     height: 60px;
     position: relative;
+    font-size: 0.875rem; /* Установка размера шрифта для футера */
 }
 
 /* Поле ввода */
