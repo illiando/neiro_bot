@@ -27,7 +27,7 @@
     border-top-right-radius: 8px;
     cursor: pointer;
     box-sizing: border-box;
-    height: 50px; /* Высота заголовка в развернутом состоянии */
+    height: 50px; /* Высота заголовка в свернутом состоянии */
     line-height: 30px; /* Выравнивание текста по вертикали */
 }
 
@@ -115,16 +115,19 @@
     bottom: 20px;
 }
 
+/* Скрыть тело и футер при минимизации */
 #chat-widget.minimized #chat-body,
 #chat-widget.minimized #chat-footer {
-    display: none; /* Скрыть тело и футер при минимизации */
+    display: none;
 }
 
+/* Заголовок в минимизированном состоянии */
 #chat-widget.minimized #chat-header {
     height: 50px; /* Высота заголовка в минимизированном состоянии */
+    line-height: 30px; /* Выравнивание текста по вертикали */
 }
 
-/* Скрытие элементов для свертывания */
+/* Прокрутка сообщения при полном раскрытии */
 #chat-widget:not(.minimized) #chat-header {
-    display: block;
+    display: block; /* Отображать заголовок в развернутом состоянии */
 }
