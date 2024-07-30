@@ -20,8 +20,9 @@
 #chat-header {
     background-color: #007bff;
     color: #fff;
-    padding: 10px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -29,6 +30,8 @@
     box-sizing: border-box;
     height: 50px; /* Высота заголовка в свернутом состоянии */
     line-height: 30px; /* Выравнивание текста по вертикали */
+    padding: 0 10px; /* Отступы по бокам для предотвращения выхода текста за границы */
+    text-align: center; /* Центрирование текста по горизонтали */
 }
 
 /* Основное тело чата */
@@ -124,10 +127,9 @@
 /* Заголовок в минимизированном состоянии */
 #chat-widget.minimized #chat-header {
     height: 50px; /* Высота заголовка в минимизированном состоянии */
-    line-height: 30px; /* Выравнивание текста по вертикали */
-}
-
-/* Прокрутка сообщения при полном раскрытии */
-#chat-widget:not(.minimized) #chat-header {
-    display: block; /* Отображать заголовок в развернутом состоянии */
+    padding: 0 10px; /* Отступы по бокам для предотвращения выхода текста за границы */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Центрирование текста по горизонтали */
 }
