@@ -1,3 +1,5 @@
+// script.js
+
 document.addEventListener('DOMContentLoaded', function() {
     const chatHeader = document.getElementById('chat-header');
     const sendButton = document.getElementById('send-button');
@@ -10,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         chatWidget.classList.add('show');
         // Отправить приветственное сообщение через 2 секунды после появления виджета
         setTimeout(() => {
-            appendMessage("Здравствуйте! Я готов ответить на ваши вопросы по марафону «Детский Нейроинструктор 2.0»", 'bot-message');
+            appendMessage("Привет! Я готов помочь написать тебе рекламный текст для проекта Нейропрофи. Напиши мне что-нибудь", 'bot-message');
         }, 2000);
     }, 5000);
 
@@ -39,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
         message.className = `message ${className}`;
         message.textContent = text;
         chatMessages.appendChild(message);
-        chatMessages.scrollTop = chatMessages.scrollHeight; // Прокрутка вниз при добавлении сообщения
+        chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
     function fetchBotResponse(userMessage) {
-        fetch('https://periodic-electric-harmony.glitch.me/api/chat', {
+        fetch('https://coconut-mica-diplodocus.glitch.me/api/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
