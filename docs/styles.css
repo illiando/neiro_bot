@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Стили для виджета */
 #chat-widget {
     border: 1px solid #ccc;
@@ -42,7 +40,7 @@
 #chat-body {
     flex: 1;
     padding: 10px;
-    overflow-y: auto;
+    overflow-y: auto; /* Добавлено для прокрутки по вертикали */
     border-bottom: 1px solid #ccc;
     position: relative; /* Убедитесь, что содержимое не перекрывает другие элементы */
     z-index: 1000; /* Обеспечиваем, чтобы содержимое чата находилось выше других элементов */
@@ -51,8 +49,6 @@
 #chat-messages {
     display: flex;
     flex-direction: column;
-    overflow-y: auto; /* Добавлено для прокрутки */
-    max-height: calc(100% - 60px); /* Ограничиваем высоту, чтобы сообщения не выходили за границу */
 }
 
 .message {
