@@ -102,8 +102,8 @@
     box-sizing: border-box;
     flex: 1;
     margin-right: 5px;
-    max-width: 160px; /* Уменьшаем максимальную ширину */
-    font-size: 12px; /* Уменьшаем размер шрифта */
+    max-width: 185px; /* Уменьшаем максимальную ширину */
+    font-size: 16px; /* Уменьшаем размер шрифта */
 }
 
 /* Кнопка отправки */
@@ -116,8 +116,8 @@
     cursor: pointer;
     box-sizing: border-box;
     white-space: nowrap;
-    max-width: 70px; /* Уменьшаем максимальную ширину */
-    font-size: 12px; /* Уменьшаем размер шрифта */
+    max-width: 100px; /* Уменьшаем максимальную ширину */
+    font-size: 16px; /* Уменьшаем размер шрифта */
 }
 
 /* Минимизированный вид */
