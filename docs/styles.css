@@ -16,13 +16,11 @@
     overflow: hidden;
 }
 
-/* Применяем анимацию видимости */
 #chat-widget.show {
     bottom: 20px;
     opacity: 1;
 }
 
-/* Стили для заголовка */
 #chat-header {
     background-color: #007bff;
     color: #fff;
@@ -31,26 +29,21 @@
     font-weight: bold;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    position: relative;
     cursor: pointer;
-    z-index: 1001;
 }
 
-/* Стили для содержимого чата */
 #chat-body {
     flex: 1;
     padding: 10px;
     overflow-y: auto;
-    border-bottom: 1px solid #ccc;
-    position: relative;
-    z-index: 1000;
 }
 
 #chat-messages {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    max-height: 100%;
+    max-height: calc(100% - 40px); /* Учитываем высоту футера */
+    padding-bottom: 10px; /* Оставляем место для сообщения */
 }
 
 .message {
@@ -73,15 +66,11 @@
     align-self: flex-start;
 }
 
-/* Обновленные стили для футера */
 #chat-footer {
     display: flex;
     border-top: 1px solid #ccc;
     padding: 10px;
     background-color: #f9f9f9;
-    position: sticky;
-    bottom: 0;
-    width: 100%;
     box-sizing: border-box;
 }
 
@@ -90,7 +79,7 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    z-index: 1000;
+    box-sizing: border-box;
 }
 
 #send-button {
@@ -109,7 +98,6 @@
 
 #chat-widget.minimized {
     height: 50px;
-    bottom: 20px;
 }
 
 #chat-widget.minimized #chat-body,
