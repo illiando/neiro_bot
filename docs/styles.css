@@ -20,7 +20,7 @@
 #chat-header {
     background-color: #007bff;
     color: #fff;
-    padding: 100px;
+    padding: 10px; /* Уменьшено до разумного значения */
     text-align: center;
     font-weight: bold;
     border-top-left-radius: 8px;
@@ -28,6 +28,7 @@
     cursor: pointer;
     box-sizing: border-box;
     height: 50px; /* Фиксированная высота для заголовка */
+    line-height: 30px; /* Выравнивание текста по вертикали */
 }
 
 /* Основное тело чата */
