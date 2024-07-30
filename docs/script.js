@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Elements:', chatHeader, sendButton, userInput, chatMessages, chatWidget);
 
     // Отправить приветственное сообщение сразу после загрузки страницы
+    console.log('Appending welcome message');
     appendMessage("Здравствуйте! Я готов ответить на ваши вопросы о продуктах школы и помочь вам выбрать лучшее решение. Меня можно свернуть, нажав на мое имя", 'bot-message');
 
     chatHeader.addEventListener('click', () => {
@@ -17,9 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
         chatWidget.classList.toggle('minimized');
     });
 
-    sendButton.addEventListener('click', sendMessage);
+    sendButton.addEventListener('click', () => {
+        console.log('Send button clicked');
+        sendMessage();
+    });
+
     userInput.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
+            console.log('Enter key pressed');
             sendMessage();
         }
     });
@@ -31,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
             appendMessage(messageText, 'user-message');
             userInput.value = '';
             fetchBotResponse(messageText);
+        } else {
+            console.log('Message text is empty');
         }
     }
 
@@ -40,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         message.textContent = text;
         chatMessages.appendChild(message);
         chatMessages.scrollTop = chatMessages.scrollHeight; // Автоматическая прокрутка к последнему сообщению
+        console.log(`Appended message: ${text} with class: ${className}`);
     }
     
     function fetchBotResponse(userMessage) {
