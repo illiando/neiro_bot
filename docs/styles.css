@@ -20,14 +20,14 @@
 #chat-header {
     background-color: #007bff;
     color: #fff;
-    padding: 10px; /* Уменьшено до разумного значения */
+    padding: 10px;
     text-align: center;
     font-weight: bold;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     cursor: pointer;
     box-sizing: border-box;
-    height: 25px; /* Фиксированная высота для заголовка */
+    height: 50px; /* Высота заголовка в развернутом состоянии */
     line-height: 30px; /* Выравнивание текста по вертикали */
 }
 
@@ -110,7 +110,7 @@
 
 /* Минимизированный вид */
 #chat-widget.minimized {
-    height: 50px; /* Установите высоту для минимизированного состояния */
+    height: 50px; /* Высота минимизированного состояния */
     width: 300px;
     bottom: 20px;
 }
@@ -118,4 +118,13 @@
 #chat-widget.minimized #chat-body,
 #chat-widget.minimized #chat-footer {
     display: none; /* Скрыть тело и футер при минимизации */
+}
+
+#chat-widget.minimized #chat-header {
+    height: 50px; /* Высота заголовка в минимизированном состоянии */
+}
+
+/* Скрытие элементов для свертывания */
+#chat-widget:not(.minimized) #chat-header {
+    display: block;
 }
