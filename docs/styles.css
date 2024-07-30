@@ -20,14 +20,14 @@
 #chat-header {
     background-color: #007bff;
     color: #fff;
-    padding: 5px;
+    padding: 1px;
     text-align: center;
     font-weight: bold;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     cursor: pointer;
     box-sizing: border-box;
-    height: 25px; /* Фиксированная высота для заголовка */
+    height: 10px; /* Фиксированная высота для заголовка */
 }
 
 /* Основное тело чата */
