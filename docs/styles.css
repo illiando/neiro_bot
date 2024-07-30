@@ -1,3 +1,4 @@
+/* Контейнер для виджета */
 #chat-widget {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -16,11 +17,13 @@
     overflow: hidden;
 }
 
+/* Показать виджет */
 #chat-widget.show {
     bottom: 20px;
     opacity: 1;
 }
 
+/* Заголовок */
 #chat-header {
     background-color: #007bff;
     color: #fff;
@@ -32,6 +35,7 @@
     cursor: pointer;
 }
 
+/* Основное тело чата */
 #chat-body {
     flex: 1;
     display: flex;
@@ -40,12 +44,14 @@
     overflow-y: auto;
 }
 
+/* Сообщения */
 #chat-messages {
     flex: 1;
     overflow-y: auto;
-    padding-bottom: 10px; /* Оставляем место для сообщения */
+    margin-bottom: 10px; /* Отступ снизу для сообщений */
 }
 
+/* Сообщения */
 .message {
     margin: 5px 0;
     padding: 8px;
@@ -54,37 +60,43 @@
     word-wrap: break-word;
 }
 
+/* Сообщения пользователя */
 .user-message {
     background-color: #007bff;
     color: #fff;
     align-self: flex-end;
 }
 
+/* Сообщения бота */
 .bot-message {
     background-color: #f1f1f1;
     color: #333;
     align-self: flex-start;
 }
 
+/* Футер */
 #chat-footer {
     display: flex;
+    align-items: center; /* Центрировать элементы по вертикали */
     border-top: 1px solid #ccc;
     padding: 10px;
     background-color: #f9f9f9;
     box-sizing: border-box;
 }
 
+/* Поле ввода */
 #user-input {
     flex: 1;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    margin-right: 10px; /* Отступ справа */
 }
 
+/* Кнопка отправки */
 #send-button {
     padding: 8px 12px;
-    margin-left: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -92,14 +104,17 @@
     cursor: pointer;
 }
 
+/* Hover состояние кнопки */
 #send-button:hover {
     background-color: #0056b3;
 }
 
+/* Минимизированный вид */
 #chat-widget.minimized {
     height: 50px;
 }
 
+/* При минимизированном виде скрыть тело чата и футер */
 #chat-widget.minimized #chat-body,
 #chat-widget.minimized #chat-footer {
     display: none;
