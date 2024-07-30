@@ -87,7 +87,7 @@
     display: flex;
     align-items: center;
     border-top: 1px solid #ccc;
-    padding: 10px;
+    padding: 5px;
     background-color: #f9f9f9;
     box-sizing: border-box;
     height: 60px;
@@ -96,18 +96,19 @@
 
 /* Поле ввода */
 #user-input {
-    padding: 8px;
+    padding: 6px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     flex: 1;
-    margin-right: 10px;
-    max-width: 180px; /* Устанавливаем максимальную ширину */
+    margin-right: 5px;
+    max-width: 160px; /* Уменьшаем максимальную ширину */
+    font-size: 12px; /* Уменьшаем размер шрифта */
 }
 
 /* Кнопка отправки */
 #send-button {
-    padding: 8px 12px;
+    padding: 6px 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -115,7 +116,8 @@
     cursor: pointer;
     box-sizing: border-box;
     white-space: nowrap;
-    max-width: 80px; /* Устанавливаем максимальную ширину */
+    max-width: 70px; /* Уменьшаем максимальную ширину */
+    font-size: 12px; /* Уменьшаем размер шрифта */
 }
 
 /* Минимизированный вид */
