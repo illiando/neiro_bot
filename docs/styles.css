@@ -72,14 +72,16 @@
 .user-message {
     background-color: #007bff;
     color: #fff;
-    align-self: flex-end;
+    align-self: flex-end; /* Выравнивание по правому краю */
+    margin-left: auto; /* Выравнивание по правому краю */
 }
 
 /* Сообщения бота */
 .bot-message {
     background-color: #f1f1f1;
     color: #333;
-    align-self: flex-start;
+    align-self: flex-start; /* Выравнивание по левому краю */
+    margin-right: auto; /* Выравнивание по левому краю */
 }
 
 /* Футер */
