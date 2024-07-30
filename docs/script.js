@@ -34,14 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function appendMessage(text, className) {
-        const message = document.createElement('div');
-        message.className = `message ${className}`;
-        message.textContent = text;
-        chatMessages.appendChild(message);
-        chatMessages.scrollTop = chatMessages.scrollHeight; // Обновляем прокрутку
-    }
-
+function appendMessage(text, className) {
+    const message = document.createElement('div');
+    message.className = `message ${className}`;
+    message.textContent = text;
+    chatMessages.appendChild(message);
+    chatMessages.scrollTop = chatMessages.scrollHeight; // Автоматическая прокрутка к последнему сообщению
+}
+    
     function fetchBotResponse(userMessage) {
         fetch('https://coconut-mica-diplodocus.glitch.me/api/chat', {
             method: 'POST',
