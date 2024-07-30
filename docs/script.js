@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatWidget = document.getElementById('chat-widget');
 
     // Отправить приветственное сообщение сразу после загрузки страницы
-    appendMessage("Здравствуйте! Я готов ответить на ваши вопросы о продуктах школы и помочь вам выбрать лучшее решение", 'bot-message');
+    appendMessage("Здравствуйте! Я готов ответить на ваши вопросы о продуктах школы и помочь вам выбрать лучшее решение. Меня можно свернуть, нажав на мое имя", 'bot-message');
 
     chatHeader.addEventListener('click', () => {
         chatWidget.classList.toggle('minimized');
