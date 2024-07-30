@@ -5,14 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatMessages = document.getElementById('chat-messages');
     const chatWidget = document.getElementById('chat-widget');
 
-    // Показать виджет через 5 секунд после загрузки страницы
-    setTimeout(() => {
-        chatWidget.classList.add('show');
-        // Отправить приветственное сообщение через 2 секунды после появления виджета
-        setTimeout(() => {
-            appendMessage("Привет! Я готов помочь написать тебе рекламный текст для проекта Нейропрофи. Напиши мне что-нибудь", 'bot-message');
-        }, 2000);
-    }, 5000);
+    // Отправить приветственное сообщение сразу после загрузки страницы
+    appendMessage("Привет! Я готов помочь написать тебе рекламный текст для проекта Нейропрофи. Напиши мне что-нибудь", 'bot-message');
 
     chatHeader.addEventListener('click', () => {
         chatWidget.classList.toggle('minimized');
