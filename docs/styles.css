@@ -92,16 +92,17 @@
     background-color: #f9f9f9;
     box-sizing: border-box;
     height: 60px; /* Фиксированная высота для футера */
+    position: relative; /* Для правильного позиционирования внутреннего содержимого */
 }
 
 /* Поле ввода */
 #user-input {
-    flex: 1;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    margin-right: 5px; /* Отступ между полем ввода и кнопкой */
+    flex: 1; /* Заполняет доступное пространство */
+    margin-right: 10px; /* Отступ между полем ввода и кнопкой */
 }
 
 /* Кнопка отправки */
@@ -113,13 +114,8 @@
     border-radius: 4px;
     cursor: pointer;
     box-sizing: border-box;
-    margin-left: 5px; /* Отступ между кнопкой и полем ввода */
     max-width: 100px; /* Максимальная ширина кнопки, чтобы она не выходила за пределы виджета */
     white-space: nowrap; /* Убедиться, что текст кнопки не переносится на другую строку */
-}
-
-#send-button:hover {
-    background-color: #0056b3;
 }
 
 /* Минимизированный вид */
