@@ -1,14 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded and parsed');
+
     const chatHeader = document.getElementById('chat-header');
     const sendButton = document.getElementById('send-button');
     const userInput = document.getElementById('user-input');
     const chatMessages = document.getElementById('chat-messages');
     const chatWidget = document.getElementById('chat-widget');
 
+    console.log('Elements:', chatHeader, sendButton, userInput, chatMessages, chatWidget);
+
     // Отправить приветственное сообщение сразу после загрузки страницы
     appendMessage("Здравствуйте! Я готов ответить на ваши вопросы о продуктах школы и помочь вам выбрать лучшее решение. Меня можно свернуть, нажав на мое имя", 'bot-message');
 
     chatHeader.addEventListener('click', () => {
+        console.log('Header clicked');
         chatWidget.classList.toggle('minimized');
     });
 
@@ -22,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function sendMessage() {
         const messageText = userInput.value.trim();
         if (messageText) {
+            console.log('Sending message:', messageText);
             appendMessage(messageText, 'user-message');
             userInput.value = '';
             fetchBotResponse(messageText);
@@ -37,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function fetchBotResponse(userMessage) {
+        console.log('Fetching bot response for message:', userMessage);
         fetch('https://periodic-electric-harmony.glitch.me/api/chat', {
             method: 'POST',
             headers: {
