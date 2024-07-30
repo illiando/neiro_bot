@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatWidget = document.getElementById('chat-widget');
 
     // Отправить приветственное сообщение сразу после загрузки страницы
-    appendMessage("Привет! Я готов помочь написать тебе рекламный текст для проекта Нейропрофи. Напиши мне что-нибудь", 'bot-message');
+    appendMessage("Здравствуйте! Я готов ответить на ваши вопросы о продуктах школы и помочь вам выбрать лучшее решение", 'bot-message');
 
     chatHeader.addEventListener('click', () => {
         chatWidget.classList.toggle('minimized');
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function fetchBotResponse(userMessage) {
-        fetch('https://coconut-mica-diplodocus.glitch.me/api/chat', {
+        fetch('https://periodic-electric-harmony.glitch.me/api/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
