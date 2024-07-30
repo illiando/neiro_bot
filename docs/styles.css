@@ -88,7 +88,7 @@
     display: flex;
     align-items: center;
     border-top: 1px solid #ccc;
-    padding: 10px; /* Равномерные отступы по бокам */
+    padding: 0 10px; /* Равномерные отступы по бокам */
     background-color: #f9f9f9;
     box-sizing: border-box;
     height: 60px; /* Фиксированная высота для футера */
